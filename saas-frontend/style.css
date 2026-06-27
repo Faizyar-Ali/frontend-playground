@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   height: 100%;
   width: 100%;
@@ -105,4 +106,9 @@ h3 span {
   border-radius: 6px;
   background-color: #cbcbcb;
   text-align: center;
+=======
+body{
+  background-color: black;
+  color:#fff;
+>>>>>>> b6f55f7 (refactor: move learning code into the project and add initial client data fetch)
 }
