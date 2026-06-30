@@ -1,12 +1,5 @@
 import {useState,useEffect} from 'react'
-
-type Client = {
-  id: number,
-  email: string,
-  name: string,
-  country: string,
-};
-
+import type { Client } from './types/client';
 
 function App(){
   const [clients, setClients] = useState<Client[]>([]);
