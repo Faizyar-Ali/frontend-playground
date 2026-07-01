@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
-import type { Client } from "../../src/types/client"
-import ClientTable from "../../src/components/ClientListTable";
+import type { Client } from "../../types/client"
+import ClientTable from "../../components/ClientTable";
 
 function ClientList(){
 const [clients, setClients] = useState<Client[]>([]);
@@ -24,10 +24,17 @@ useEffect(()=>{
   return(
     <div>
       <h1>Clients</h1>
+            <div className="clientheader">
+              <h4>Name</h4>
+              <h4>Email</h4>  
+              <h4>Country</h4>
+        </div>
     {loading?(
       <p>Loading...</p>
     ):(
-        <ClientTable clients={clients} />
+        clients.map((client)=>(
+        <ClientTable key={client.id} client={client} />
+        ))
       )}
     </div>
     );

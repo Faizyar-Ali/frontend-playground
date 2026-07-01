@@ -1,4 +1,4 @@
-import ClientList from "../data/client/ClientList"
+import ClientList from "./pages/client/ClientList"
 
 function App(){
   return (
