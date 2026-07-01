@@ -24,17 +24,12 @@ useEffect(()=>{
   return(
     <div>
       <h1>Clients</h1>
-            <div className="clientheader">
-              <h4>Name</h4>
-              <h4>Email</h4>  
-              <h4>Country</h4>
-        </div>
     {loading?(
       <p>Loading...</p>
     ):(
-        clients.map((client)=>(
-        <ClientTable key={client.id} client={client} />
-        ))
+    <div>
+        <ClientTable clients={clients} />
+    </div>
       )}
     </div>
     );
